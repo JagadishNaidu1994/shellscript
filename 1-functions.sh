@@ -8,3 +8,4 @@ then
     echo "Number is greater"
 else
     echo "Number is not greater"
+fi
