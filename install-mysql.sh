@@ -9,6 +9,8 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+echo "Script started running at $TIMESTAMP" &>> $LOG_FILE
+
 VALIDATE (){
     if [ $1 = 0 ]
     then 
