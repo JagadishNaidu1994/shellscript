@@ -1,7 +1,7 @@
 #!bin/bash
 echo "Please enter username : "
 
-read USERNAME
+read -s USERNAME
 
 
 echo "Username is $USERNAME ."
