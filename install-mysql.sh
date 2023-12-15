@@ -4,7 +4,10 @@ ID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOG_FILE="/tmp/$0-$TIMESTAMP.log"
 
-RED
+RED=\e[31m
+GREEN=\e[32m
+YELLOW=\e[33m
+NORMAL=\e[0m
 
 VALIDATE (){
     if [ $1 = 0 ]
