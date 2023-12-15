@@ -1,6 +1,8 @@
 #!/bin/bash
 
 ID=$(id -u) 
+TIMESTAMP=$(date +%F-%H-%M-%S)
+LOG_FILE="/tmp/$0-$TIMESTAMP.log"
 
 VALIDATE (){
     if [ $1 = 0 ]
@@ -19,10 +21,10 @@ else
     echo "You Are Root :) "
 fi
 
-yum install mysql -y
+yum install mysql -y &>> $LOGFILE
 
 VALIDATE $? "MYSQL"
 
-yum install git -y
+yum install git -y &>> $LOGFILE
 
 VALIDATE $? "git"
