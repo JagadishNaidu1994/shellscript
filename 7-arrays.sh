@@ -9,3 +9,5 @@ echo "Second fruit is ${FRUITS[1]}"
 
 
 echo "Third fruit is ${FRUITS[2]}"
+
+echo "All Fruits are ${FRUITS[@]}"
