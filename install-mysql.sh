@@ -1,6 +1,15 @@
 #!/bin/bash
 
-ID=$(id -u)
+ID=$(id -u) 
+
+VALIDATE (){
+    if [ $1 = 0 ]
+    then 
+        echo "Installation of $2 Success....!!!!"
+    else   
+        echo "Installation of $2 Failed..."
+    fi
+}
 
 if [ $ID -ne 0 ]
 then 
@@ -12,18 +21,8 @@ fi
 
 yum install mysql -y
 
-if [ $? = 0 ]
-then 
-    echo "Installation of MYSQL Success....!!!!"
-else   
-    echo "Installation of MYSQL Failed..."
-fi
+VALIDATE $? "Installing MYSQL"
 
 yum install git -y
 
-if [ $? = 0 ]
-then 
-    echo "Installation of GIT Success....!!!!"
-else   
-    echo "Installation of GIT Failed..."
-fi
+VALIDATE $? "Installing git"
