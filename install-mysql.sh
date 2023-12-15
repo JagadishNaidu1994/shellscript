@@ -14,7 +14,16 @@ yum install mysql -y
 
 if [ $? = 0 ]
 then 
-    echo "Installation Success....!!!!"
+    echo "Installation of MYSQL Success....!!!!"
 else   
-    echo "Installation Failed..."
+    echo "Installation of MYSQL Failed..."
+fi
+
+yum install git -y
+
+if [ $? = 0 ]
+then 
+    echo "Installation of GIT Success....!!!!"
+else   
+    echo "Installation of GIT Failed..."
 fi
