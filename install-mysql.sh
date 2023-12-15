@@ -21,10 +21,10 @@ else
     echo "You Are Root :) "
 fi
 
-yum install mysql -y &>> $LOGFILE
+yum -o install mysql -y &>> $LOGFILE
 
 VALIDATE $? "MYSQL"
 
-yum install git -y &>> $LOGFILE
+yum -o install git -y &>> $LOGFILE
 
 VALIDATE $? "git"
